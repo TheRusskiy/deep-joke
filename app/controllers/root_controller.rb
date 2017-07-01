@@ -7,9 +7,9 @@ class RootController < ApplicationController
   end
 
   def get_joke
-    # joke = JokeClient.predict(params[:text])
-    joke = "haha"
-    render json: { joke: joke }
+    joke = JokeClient.predict(params[:text])
+    # joke = "haha"
+    render json: { joke: joke[:text].downcase }
   end
 
   def current_user

@@ -1,7 +1,7 @@
 class JokeClient
-  def predict(text)
+  def self.predict(text)
     use_ssl = false
-    uri = URI.parse("http#{use_ssl ? 's' : ''}://localhost:6000/predict-message")
+    uri = URI.parse("http#{use_ssl ? 's' : ''}://localhost:6000/get-joke")
     http = Net::HTTP.new(uri.host, uri.port)
     http.use_ssl = use_ssl
     request = Net::HTTP::Post.new(uri.request_uri, {'Content-Type' =>'application/json'})

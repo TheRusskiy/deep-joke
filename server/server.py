@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 predictor_instance = Predictor()
 predictor_instance.init()
-@app.route("/predict-message", methods=['POST'])
+@app.route("/get-joke", methods=['POST'])
 def predict_message():
     json = request.get_json()
     print(json)
