@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="psycho">
+<head>
+  <title><%= @title || "Deep Joke"%></title>
+  <%= csrf_meta_tags %>
+  <%= Gon::Base.render_data %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <script src="http://maps.google.com/maps/api/js?key=AIzaSyCh4s7PgapfP0g7W45TJ9SrhxKpUlQn6UY"></script>
+</head>
+
+<body>
+<%= render '/navbar' %>
+<%= yield %>
+<script type="text/javascript" charset="utf-8">
+</script>
+</body>
+</html>

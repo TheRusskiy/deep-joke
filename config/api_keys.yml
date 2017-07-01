@@ -1,0 +1,22 @@
+facebook:
+  development:
+    app_id: 1835510576699587
+    app_secret: c7a84aa3e27e55d63b04ce221d40a5ba
+  staging:
+    app_id: 1835510576699587
+    app_secret: c7a84aa3e27e55d63b04ce221d40a5ba
+  production:
+    app_id: 1835510576699587
+    app_secret: c7a84aa3e27e55d63b04ce221d40a5ba
+
+twitter:
+  development:
+    app_id: Hvj6zu6OApagzr4H5OT6AE4Ja
+    app_secret: kjrokoclZCdkAF5FtBKcegMWRBjJfV56T0E6400auZLcZezoFl
+  staging:
+    app_id: Hvj6zu6OApagzr4H5OT6AE4Ja
+    app_secret: kjrokoclZCdkAF5FtBKcegMWRBjJfV56T0E6400auZLcZezoFl
+  production:
+    app_id: Hvj6zu6OApagzr4H5OT6AE4Ja
+    app_secret: kjrokoclZCdkAF5FtBKcegMWRBjJfV56T0E6400auZLcZezoFl
+

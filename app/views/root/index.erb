@@ -1,0 +1,12 @@
+<div style="height: 60px"></div>
+<div class="container" ng-controller="JokeCtrl">
+  <div class="row">
+    <div class="col-md-12 joke-container">
+      <h2>Joke should start with...</h2>
+      <div class="input-wrapper">
+        <input type="text" class="form-control input-lg" ng-model="jokeText">
+      </div>
+      <button class="btn btn-primary" ng-disabled="!jokeText" ng-click="getJoke(jokeText)">Make me laugh!</button>
+    </div>
+  </div>
+</div>
