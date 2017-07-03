@@ -20,3 +20,9 @@ node_modules/
 *.dump
 public/system/
 .DS_store
+save*
+version_1/
+server/__pycache__/
+params.p
+preprocess.p
+checkpoint

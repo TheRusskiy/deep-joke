@@ -6,7 +6,7 @@ class JokeClient
     http.use_ssl = use_ssl
     request = Net::HTTP::Post.new(uri.request_uri, {'Content-Type' =>'application/json'})
     body = {
-      text: text,
+      text: text.downcase,
     }
     request.body = body.to_json
     response = http.request(request)

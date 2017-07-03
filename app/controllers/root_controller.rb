@@ -7,9 +7,15 @@ class RootController < ApplicationController
   end
 
   def get_joke
-    joke = JokeClient.predict(params[:text])
-    # joke = "haha"
-    render json: { joke: joke[:text].downcase }
+    joke = JokeClient.predict(params[:text])[:text]
+    joke = joke.downcase
+    joke = joke.gsub('- ', '<br/>- ')
+    symbols = %w[. , : ; _ - ! ? ( )]
+    symbols.each do |symb|
+      joke = joke.gsub(" #{symb}", symb)
+    end
+    joke = joke.gsub(/\s+/, ' ').strip
+    render json: { joke: joke }
   end
 
   def current_user

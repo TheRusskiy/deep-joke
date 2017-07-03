@@ -39,7 +39,7 @@ class Predictor:
         input_text, initial_state, final_state, probs, keep_prob = self.get_tensors(self.loaded_graph)
 
         # Sentences generation setup
-        gen_sentences = self.make_initial_sentences(initial_words.split(' '))
+        gen_sentences = self.make_initial_sentences(initial_words.lower().split(' '))
         prev_state = sess.run(initial_state, {input_text: np.array([[1]]), keep_prob: 1.0})
 
         # Generate sentences
@@ -59,9 +59,9 @@ class Predictor:
         
         # Remove tokens
         the_joke = ' '.join(gen_sentences)
-        the_end = the_joke.index('<EOS>')
+        the_end = ('<EOS>' in the_joke) and the_joke.index('<EOS>')
         if the_end:
-            while the_end and the_end < 30:
+            while the_end and the_end < 60:
                 the_joke = the_joke.replace('<EOS>', '', 1)
                 the_end = the_joke.index('<EOS>')
             the_joke = the_joke[:the_end]
